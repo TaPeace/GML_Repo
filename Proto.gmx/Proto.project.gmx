@@ -8,15 +8,25 @@
     <sound>sound\aMastersound</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sMaster</sprite>
+    <sprites name="Blocks">
+      <sprite>sprites\sprBlock</sprite>
+      <sprite>sprites\sprSlope_1</sprite>
+      <sprite>sprites\sprSlope_2</sprite>
+    </sprites>
+    <sprite>sprites\sprPlayer_x</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\oMaster</object>
+    <objects name="Blocks">
+      <object>objects\objBlock</object>
+      <object>objects\objSlope_1</object>
+      <object>objects\objSlope_2</object>
+    </objects>
+    <object>objects\objPlayer</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rMasterlevel</room>
+    <room>rooms\rmTestlevel</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
