@@ -15,6 +15,7 @@
     </sprites>
     <sprite>sprites\sMaster</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_enemy_v2</sprite>
     <sprite>sprites\spr_box</sprite>
     <sprite>sprites\spr_box2</sprite>
     <sprite>sprites\spr_Player_X</sprite>
