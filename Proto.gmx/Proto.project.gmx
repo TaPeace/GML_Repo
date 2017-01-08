@@ -5,17 +5,10 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites">
-    <sprite>sprites\s_test</sprite>
-    <sprite>sprites\sPlayer</sprite>
-    <sprite>sprites\sEnemy</sprite>
-  </sprites>
+  <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <objects name="objects">
-    <object>objects\oPlayer</object>
-    <object>objects\oEnemy</object>
-  </objects>
+  <objects name="objects"/>
   <help>
     <rtf>help.rtf</rtf>
   </help>
