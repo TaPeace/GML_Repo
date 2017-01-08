@@ -26,6 +26,10 @@
       <sprite>sprites\spr_enemy</sprite>
       <sprite>sprites\spr_enemy_v2</sprite>
     </sprites>
+    <sprites name="Weapons">
+      <sprite>sprites\spr_handgun</sprite>
+      <sprite>sprites\spr_bullet</sprite>
+    </sprites>
     <sprite>sprites\sMaster</sprite>
     <sprite>sprites\spr_box</sprite>
     <sprite>sprites\spr_box2</sprite>
@@ -48,6 +52,8 @@
     <object>objects\oMaster</object>
     <object>objects\obj_Player</object>
     <object>objects\obj_Enemy</object>
+    <object>objects\obj_handgun</object>
+    <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Testraum</room>
