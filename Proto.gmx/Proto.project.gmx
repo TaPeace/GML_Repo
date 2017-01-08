@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\s_test</sprite>
     <sprite>sprites\sPlayer</sprite>
+    <sprite>sprites\sprite2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
