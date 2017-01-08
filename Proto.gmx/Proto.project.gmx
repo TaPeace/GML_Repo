@@ -22,6 +22,7 @@
     <sprite>sprites\spr_door1</sprite>
     <sprite>sprites\spr_door2</sprite>
     <sprite>sprites\spr_door3</sprite>
+    <sprite>sprites\spr_door4</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
