@@ -29,7 +29,7 @@
 
 hSpd = 0;
 vSpd = 0;
-moveSpeed = 100 / room_speed;
+moveSpeed = 120 / room_speed;
 </string>
           </argument>
         </arguments>
@@ -60,24 +60,39 @@ kDown = keyboard_check(ord("S"));
 kLeft = -keyboard_check(ord("A"));
 kRight = keyboard_check(ord("D"));
 
-//Movement Values
+//Movement values
 vMove = kUp + kDown;
 hMove = kLeft + kRight;
 vSpd = vMove * moveSpeed;
 hSpd = hMove * moveSpeed;
 
-//Horizontal Collision
+//Horizontal collision
 if place_meeting(x + hSpd,y,obj_Blocks_Parent){
-    if place_meeting(x + sign(hSpd),y,obj_Blocks_Parent){
+    //Slopes up
+    if place_meeting(x + sign(hSpd), y, obj_Blocks_Parent) &amp;&amp; !place_meeting(x + sign(hSpd), y - 1, obj_Blocks_Parent){
+        --y;
+    }
+    //Slopes down
+    if place_meeting(x + sign(hSpd), y, obj_Blocks_Parent) &amp;&amp; !place_meeting(x + sign(hSpd), y + 1, obj_Blocks_Parent){
+        ++y;
+    }
+    //else
+    if !place_meeting(x + sign(hSpd),y,obj_Blocks_Parent){
         x += sign(hSpd);
     }
     hSpd = 0;
 }
 x += hSpd;
 
-//Vertical Collision
+//Vertical collision
 if place_meeting(x,y + vSpd,obj_Blocks_Parent){
-    if place_meeting(x,y + sign(vSpd),obj_Blocks_Parent){
+    if place_meeting(x, y + sign(vSpd), obj_Blocks_Parent) &amp;&amp; !place_meeting(x - 1, y + sign(vSpd), obj_Blocks_Parent){
+        --x;
+    }
+    if place_meeting(x, y + sign(vSpd), obj_Blocks_Parent) &amp;&amp; !place_meeting(x + 1, y + sign(vSpd), obj_Blocks_Parent){
+        ++x;
+    }
+    if !place_meeting(x,y + sign(vSpd),obj_Blocks_Parent){
         y += sign(vSpd);
     }
     vSpd = 0;
