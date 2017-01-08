@@ -7,7 +7,93 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Creation Code
+
+// Init default variables
+vSpd = 0;
+hSpd = 0;
+MoveSpeed = 100 / room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Step event
+
+// Get inputs
+kUp = -keyboard_check(ord("W"));
+kDown = keyboard_check(ord("S"));
+kLeft = -keyboard_check(ord("A"));
+kRight = keyboard_check(ord("D"));
+
+// Get movement values
+hMove = kLeft + kRight;
+vMove = kUp + kDown;
+hSpd = hMove * MoveSpeed;
+vSpd = vMove * MoveSpeed;
+
+// Horizontal Collision Check
+if place_meeting(x + hSpd,y,objBlocks) {
+    if !place_meeting(x + sign(hSpd),y,objBlocks) {
+        x += sign(hSpd);
+    }
+    hSpd = 0;
+}
+x += hSpd;
+
+// Vertical Collision Check
+if place_meeting(x,y + vSpd,objBlocks) {
+    if !place_meeting(x,y + sign(vSpd),objBlocks) {
+        y += sign(vSpd);
+    }
+    vSpd = 0;
+}
+y += vSpd;
+
+// Wrap Screen
+move_wrap(1,1,0);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
