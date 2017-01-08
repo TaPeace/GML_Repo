@@ -19,6 +19,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <objects name="Blocks">
+      <object>objects\objBlocks</object>
       <object>objects\objBlock</object>
       <object>objects\objSlope_1</object>
       <object>objects\objSlope_2</object>
