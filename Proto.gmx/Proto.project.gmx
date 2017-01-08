@@ -23,6 +23,8 @@
     <sprite>sprites\spr_door2</sprite>
     <sprite>sprites\spr_door3</sprite>
     <sprite>sprites\spr_door4</sprite>
+    <sprite>sprites\spr_buecherregal</sprite>
+    <sprite>sprites\spr_buechergestell</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
