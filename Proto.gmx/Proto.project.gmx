@@ -14,21 +14,9 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-<<<<<<< HEAD
     <object>objects\oMaster</object>
-=======
-    <objects name="Blocks">
-      <object>objects\objBlocks</object>
-      <object>objects\objBlock</object>
-      <object>objects\objSlope_1</object>
-      <object>objects\objSlope_2</object>
-    </objects>
-    <object>objects\objPlayer</object>
->>>>>>> origin/master
   </objects>
-  <rooms name="rooms">
-    <room>rooms\rMasterlevel</room>
-  </rooms>
+  <rooms name="rooms"/>
   <help>
     <rtf>help.rtf</rtf>
   </help>
