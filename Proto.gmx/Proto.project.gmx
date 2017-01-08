@@ -11,6 +11,7 @@
     <sprite>sprites\sMaster</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_box</sprite>
+    <sprite>sprites\spr_box2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
