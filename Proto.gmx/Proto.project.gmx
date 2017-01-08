@@ -13,6 +13,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\oPlayer</object>
+    <object>objects\oEnemy</object>
   </objects>
   <help>
     <rtf>help.rtf</rtf>
