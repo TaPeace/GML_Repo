@@ -19,6 +19,9 @@
     <sprite>sprites\spr_box</sprite>
     <sprite>sprites\spr_box2</sprite>
     <sprite>sprites\spr_Player_X</sprite>
+    <sprite>sprites\spr_door1</sprite>
+    <sprite>sprites\spr_door2</sprite>
+    <sprite>sprites\spr_door3</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
