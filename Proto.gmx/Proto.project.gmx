@@ -29,6 +29,11 @@
     <sprites name="Weapons">
       <sprite>sprites\spr_handgun</sprite>
       <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_handgun_v2</sprite>
+      <sprite>sprites\spr_handgun_v3</sprite>
+      <sprite>sprites\spr_handgun_v4</sprite>
+      <sprite>sprites\spr_handgun_v5</sprite>
+      <sprite>sprites\spr_mg_v1</sprite>
     </sprites>
     <sprite>sprites\sMaster</sprite>
     <sprite>sprites\spr_box</sprite>
