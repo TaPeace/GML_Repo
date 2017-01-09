@@ -35,12 +35,14 @@
       <sprite>sprites\spr_handgun_v5</sprite>
       <sprite>sprites\spr_mg_v1</sprite>
     </sprites>
+    <sprites name="Furniture">
+      <sprite>sprites\spr_box</sprite>
+      <sprite>sprites\spr_box2</sprite>
+      <sprite>sprites\spr_buecherregal</sprite>
+      <sprite>sprites\spr_buechergestell</sprite>
+    </sprites>
     <sprite>sprites\sMaster</sprite>
-    <sprite>sprites\spr_box</sprite>
-    <sprite>sprites\spr_box2</sprite>
     <sprite>sprites\spr_Player_X</sprite>
-    <sprite>sprites\spr_buecherregal</sprite>
-    <sprite>sprites\spr_buechergestell</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
