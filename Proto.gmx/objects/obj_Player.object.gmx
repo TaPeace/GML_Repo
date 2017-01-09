@@ -121,6 +121,7 @@ if mouse_check_button(mb_right){
     TriDownsideY = mouse_y + lengthdir_y(AimLength,MouseDirection + AimTriangleDir);
     if AimLength &gt;= 2 {
         AimLength -= 30 / room_speed;
+        AimAccur = AimLength / 4;
     } else {
         AimLength = 2;
     }
@@ -138,6 +139,7 @@ if mouse_check_button(mb_right){
 if mouse_check_button(mb_left) {
     if gun == 1 and SecondsSinceLastShot &gt;= SecondsBetweenShots {
             Bullet = instance_create(x,y,obj_bullet);
+            Bullet.direction = point_direction(x,y,mouse_x,mouse_y) + random_range(-AimAccur,AimAccur);
             SecondsSinceLastShot = 0;
     }
 }
