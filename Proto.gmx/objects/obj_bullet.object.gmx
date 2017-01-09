@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Create event
 
-BulletSpeed = 500 / room_speed;
+BulletSpeed = 800 / room_speed;
 </string>
           </argument>
         </arguments>
