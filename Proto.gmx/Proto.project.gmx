@@ -41,11 +41,17 @@
       <sprite>sprites\spr_buecherregal</sprite>
       <sprite>sprites\spr_buechergestell</sprite>
     </sprites>
+    <sprites name="MouseCursor">
+      <sprite>sprites\spr_AimCursor</sprite>
+    </sprites>
     <sprite>sprites\sMaster</sprite>
     <sprite>sprites\spr_Player_X</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fon_Text</font>
+  </fonts>
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\obj_GameController</object>
