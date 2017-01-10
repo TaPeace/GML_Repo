@@ -117,10 +117,21 @@ if mouse_check_button(mb_right){
     IsAiming = true;
     //Shooting
     if mouse_check_button(mb_left) {
-        if gun == 1 and SecondsSinceLastShot &gt;= SecondsBetweenShots {
+        switch gun {
+        case 1:
+            if SecondsSinceLastShot &gt;= SecondsBetweenShots {
                 Bullet = instance_create(x,y,obj_bullet);
-                Bullet.direction = MouseDirection + random_range(-0.5,0.5);
+                Bullet.direction = MouseDirection + random_range(-1,1);
                 SecondsSinceLastShot = 0;
+            }
+            break;
+        case 2:
+            if SecondsSinceLastShot &gt;= SecondsBetweenShots {
+                Bullet = instance_create(x,y,obj_bullet);
+                Bullet.direction = MouseDirection + random_range(-1,1);
+                SecondsSinceLastShot = 0;
+            }
+            break;
         }
     }
 } else {

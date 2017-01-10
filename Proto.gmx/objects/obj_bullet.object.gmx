@@ -56,10 +56,6 @@ speed = BulletSpeed;
 image_angle = direction;
 
 //Collision check and destroy the bullet
-if instance_place(x,y,obj_Enemy){
-    instance_destroy();
-}
-
 if place_meeting(x,y,obj_Blocks_Parent){
     instance_destroy();
 }

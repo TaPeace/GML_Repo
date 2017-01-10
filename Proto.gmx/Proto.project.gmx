@@ -44,10 +44,14 @@
     <sprites name="MouseCursor">
       <sprite>sprites\spr_AimCursor</sprite>
     </sprites>
+    <sprites name="Player">
+      <sprite>sprites\spr_Player_X</sprite>
+    </sprites>
     <sprite>sprites\sMaster</sprite>
-    <sprite>sprites\spr_Player_X</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgr_Default</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts"/>
   <fonts name="fonts">
@@ -64,10 +68,14 @@
       <object>objects\obj_Slope1</object>
       <object>objects\obj_Slope2</object>
     </objects>
+    <objects name="Furniture">
+      <object>objects\obj_Regal</object>
+    </objects>
     <object>objects\oMaster</object>
     <object>objects\obj_Player</object>
     <object>objects\obj_Enemy</object>
     <object>objects\obj_handgun</object>
+    <object>objects\obj_mg_v1</object>
     <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
