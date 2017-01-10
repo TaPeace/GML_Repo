@@ -47,6 +47,9 @@
     <sprites name="Player">
       <sprite>sprites\spr_Player_X</sprite>
     </sprites>
+    <sprites name="Splatter">
+      <sprite>sprites\spr_Bloodsplatter</sprite>
+    </sprites>
     <sprite>sprites\sMaster</sprite>
   </sprites>
   <backgrounds name="background">
@@ -76,6 +79,7 @@
     <object>objects\obj_handgun</object>
     <object>objects\obj_mg_v1</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_Bloodsplatter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Testraum</room>
