@@ -60,6 +60,8 @@ if instance_exists(obj_Player){
 //Hit by bullet
 if place_meeting(x,y,obj_bullet) {
     bullet = instance_place(x,y,obj_bullet);
+    splatter = instance_create(bullet.x + lengthdir_x(10,bullet.image_angle),bullet.y + lengthdir_y(10,bullet.image_angle),obj_Bloodsplatter);
+    splatter.image_angle = bullet.image_angle;
     if Hp &gt; 0 {
         Kick = 5;
         KickDirection = bullet.direction;
