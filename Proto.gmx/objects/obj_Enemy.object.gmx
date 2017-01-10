@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Hp = 10;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -29,22 +52,36 @@
 
 //Move forwards to player
 if instance_exists(obj_Player){
-    speed = 20 / room_speed;
-    direction = point_direction(x,y,obj_Player.x,obj_Player.y);
+    mp_potential_step_object(obj_Player.x,obj_Player.y,20 /room_speed,obj_Blocks_Parent);
+//    speed = 20 / room_speed;
+//    direction = point_direction(x,y,obj_Player.x,obj_Player.y);
 }
 
-
 //Hit by bullet
-if place_meeting(x,y,obj_bullet){
+if place_meeting(x,y,obj_bullet) {
     bullet = instance_place(x,y,obj_bullet);
-    Kick = 5;
-    KickDirection = bullet.direction;
-    x = x + lengthdir_x(Kick,KickDirection);
-    y = y + lengthdir_y(Kick,KickDirection);
+    if Hp &gt; 0 {
+        Kick = 5;
+        KickDirection = bullet.direction;
+        image_alpha = 0.5;
+        x = x + lengthdir_x(Kick,KickDirection);
+        y = y + lengthdir_y(Kick,KickDirection);
+        Hp -= 1;
+    } else {
+        instance_destroy();
+    }
     with bullet {
         instance_destroy();
     }
+} else {
+    if image_alpha &lt; 1 {
+        image_alpha += 2 / room_speed;
+    } else {
+        image_alpha = 1;
+    }
 }
+
+
 </string>
           </argument>
         </arguments>
