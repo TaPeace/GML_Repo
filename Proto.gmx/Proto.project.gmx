@@ -49,12 +49,14 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <fonts name="fonts">
     <font>fonts\fon_Text</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\obj_GameController</object>
+      <object>objects\obj_Tutorial</object>
     </objects>
     <objects name="Blocks">
       <object>objects\obj_Blocks_Parent</object>
