@@ -35,9 +35,6 @@ SecondsSinceLastShot = 0;
 SecondsBetweenShots = 0;
 IsAiming = false;
 MouseDirection = 0;
-AimTriangleDir = 90
-AimLength = 30;
-AimAccur = 0;
 
 //Actual weapon, -1 if no weapon picked up
 gun = -1;
@@ -113,36 +110,25 @@ if place_meeting(x,y + vSpd,obj_Blocks_Parent){
 }
 y += vSpd;
 
-//Aiming, change the cursor if the right mouse button pressed
+//Aiming
 if mouse_check_button(mb_right){
-    TriUpsideX = mouse_x + lengthdir_x(AimLength,MouseDirection - AimTriangleDir);
-    TriUpsideY = mouse_y + lengthdir_y(AimLength,MouseDirection - AimTriangleDir);
-    TriDownsideX = mouse_x + lengthdir_x(AimLength,MouseDirection + AimTriangleDir);
-    TriDownsideY = mouse_y + lengthdir_y(AimLength,MouseDirection + AimTriangleDir);
-    if AimLength &gt;= 2 {
-        AimLength -= 30 / room_speed;
-        AimAccur = AimLength / 4;
-    } else {
-        AimLength = 2;
-    }
-    cursor_sprite = spr_AimCursor;
     window_set_cursor(cr_none);
+    cursor_sprite = spr_AimCursor;
     IsAiming = true;
+    //Shooting
+    if mouse_check_button(mb_left) {
+        if gun == 1 and SecondsSinceLastShot &gt;= SecondsBetweenShots {
+                Bullet = instance_create(x,y,obj_bullet);
+                Bullet.direction = MouseDirection + random_range(-0.5,0.5);
+                SecondsSinceLastShot = 0;
+        }
+    }
 } else {
-    cursor_sprite = -1;
     window_set_cursor(cr_default);
+    cursor_sprite = -1;
     IsAiming = false;
-    AimLength = 50;
 }
 
-//Shooting
-if mouse_check_button(mb_left) {
-    if gun == 1 and SecondsSinceLastShot &gt;= SecondsBetweenShots {
-            Bullet = instance_create(x,y,obj_bullet);
-            Bullet.direction = point_direction(x,y,mouse_x,mouse_y) + random_range(-AimAccur,AimAccur);
-            SecondsSinceLastShot = 0;
-    }
-}
 SecondsSinceLastShot += 1 / room_speed;
 
 </string>
@@ -169,11 +155,10 @@ SecondsSinceLastShot += 1 / room_speed;
             <kind>1</kind>
             <string>draw_self();
 
-//Draw aimingcone
+//Draw aimingline
 if IsAiming {
     draw_set_alpha(0.4);
-//    draw_triangle_colour(x,y,mouse_x + lengthdir_x(AimLength,MouseDirection - AimTriangleDir),mouse_y + lengthdir_y(AimLength,MouseDirection - AimTriangleDir),mouse_x + lengthdir_x(AimLength,MouseDirection + AimTriangleDir),mouse_y + lengthdir_y(AimLength,MouseDirection + AimTriangleDir),c_red,c_red,c_red,false);
-    draw_triangle_colour(x,y,TriUpsideX,TriUpsideY,TriDownsideX,TriDownsideY,c_red,c_red,c_red,false);
+    draw_line_width_colour(x,y,mouse_x,mouse_y,2,c_red,c_white);
     draw_set_alpha(1);
 }
 </string>
