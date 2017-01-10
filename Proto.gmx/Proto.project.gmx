@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\aMastersound</sound>
+    <sound>sound\aBullet</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Blocks">
