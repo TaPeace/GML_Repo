@@ -31,10 +31,36 @@
       <sprite>sprites\spr_handgun</sprite>
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_handgun_v2</sprite>
+      <sprite>sprites\spr_handgun_v2_1</sprite>
+      <sprite>sprites\spr_handgun_v2_2</sprite>
+      <sprite>sprites\spr_handgun_v2_3</sprite>
+      <sprite>sprites\spr_handgun_v2_4</sprite>
       <sprite>sprites\spr_handgun_v3</sprite>
+      <sprite>sprites\spr_handgun_v3_1</sprite>
+      <sprite>sprites\spr_handgun_v3_2</sprite>
+      <sprite>sprites\spr_handgun_v3_3</sprite>
+      <sprite>sprites\spr_handgun_v3_4</sprite>
       <sprite>sprites\spr_handgun_v4</sprite>
+      <sprite>sprites\spr_handgun_v4_1</sprite>
+      <sprite>sprites\spr_handgun_v4_2</sprite>
+      <sprite>sprites\spr_handgun_v4_3</sprite>
+      <sprite>sprites\spr_handgun_v4_4</sprite>
       <sprite>sprites\spr_handgun_v5</sprite>
+      <sprite>sprites\spr_handgun_v6</sprite>
+      <sprite>sprites\spr_handgun_v6_1</sprite>
+      <sprite>sprites\spr_handgun_v6_2</sprite>
+      <sprite>sprites\spr_handgun_v6_3</sprite>
+      <sprite>sprites\spr_handgun_v6_4</sprite>
       <sprite>sprites\spr_mg_v1</sprite>
+      <sprite>sprites\spr_mg_v2</sprite>
+      <sprite>sprites\spr_mg_v2_1</sprite>
+      <sprite>sprites\spr_shotgun</sprite>
+      <sprite>sprites\spr_knife</sprite>
+      <sprite>sprites\spr_knife_v2</sprite>
+      <sprite>sprites\spr_knife_v3</sprite>
+      <sprite>sprites\spr_baseball_bat</sprite>
+      <sprite>sprites\spr_baseball_bat_v2</sprite>
+      <sprite>sprites\spr_baseball_bat_v3</sprite>
     </sprites>
     <sprites name="Furniture">
       <sprite>sprites\spr_box</sprite>
@@ -50,6 +76,13 @@
     </sprites>
     <sprites name="Splatter">
       <sprite>sprites\spr_Bloodsplatter</sprite>
+    </sprites>
+    <sprites name="Items">
+      <sprite>sprites\spr_key</sprite>
+      <sprite>sprites\spr_key_v2</sprite>
+      <sprite>sprites\spr_key_1_2</sprite>
+      <sprite>sprites\spr_key_1_</sprite>
+      <sprite>sprites\spr_key__2</sprite>
     </sprites>
     <sprite>sprites\sMaster</sprite>
   </sprites>
