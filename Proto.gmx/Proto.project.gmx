@@ -65,7 +65,7 @@
     <sprites name="Wepaons Modi">
       <sprite>sprites\spr_silencer</sprite>
       <sprite>sprites\spr_silencer_v2</sprite>
-      <sprite>sprites\spr_flashlight</sprite>
+      <sprite>sprites\spr_flashlight_m</sprite>
       <sprite>sprites\spr_target_tube</sprite>
       <sprite>sprites\spr_laserpointer</sprite>
     </sprites>
@@ -90,6 +90,15 @@
       <sprite>sprites\spr_key_1_2</sprite>
       <sprite>sprites\spr_key_1_</sprite>
       <sprite>sprites\spr_key__2</sprite>
+      <sprite>sprites\spr_flashlight</sprite>
+      <sprite>sprites\spr_screwdriver</sprite>
+      <sprite>sprites\spr_medic_S</sprite>
+      <sprite>sprites\spr_antidote_S</sprite>
+      <sprite>sprites\spr_medic_M</sprite>
+      <sprite>sprites\spr_antidote_M</sprite>
+      <sprite>sprites\spr_medic_L</sprite>
+      <sprite>sprites\spr_antidote_L</sprite>
+      <sprite>sprites\spr_laterne</sprite>
     </sprites>
     <sprite>sprites\sMaster</sprite>
   </sprites>
