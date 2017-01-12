@@ -36,6 +36,7 @@ SecondsBetweenShots = 0;
 IsAiming = false;
 MouseDirection = 0;
 image_speed = 0;
+AimAccur = 1;
 
 //Actual weapon, -1 if no weapon picked up
 gun = -1;
@@ -75,6 +76,13 @@ hMove = kLeft + kRight;
 vSpd = vMove * moveSpeed;
 hSpd = hMove * moveSpeed;
 
+if kLeft = -1 {
+    image_xscale = -1;
+}
+if kRight = 1 {
+    image_xscale = 1;
+}
+
 //Point direction to mouse
 MouseDirection = point_direction(x,y,mouse_x,mouse_y);
 
@@ -96,6 +104,8 @@ if place_meeting(x + hSpd,y,obj_Blocks_Parent){
 }
 x += hSpd;
 
+
+
 //Vertical collision
 if place_meeting(x,y + vSpd,obj_Blocks_Parent){
     if place_meeting(x, y + sign(vSpd), obj_Blocks_Parent) &amp;&amp; !place_meeting(x - 1, y + sign(vSpd), obj_Blocks_Parent){
@@ -113,6 +123,7 @@ y += vSpd;
 
 //Aiming
 if mouse_check_button(mb_right){
+    image_index = 1;
     window_set_cursor(cr_none);
     cursor_sprite = spr_AimCursor;
     IsAiming = true;
@@ -122,7 +133,7 @@ if mouse_check_button(mb_right){
         case 1:
             if SecondsSinceLastShot &gt;= SecondsBetweenShots {
                 Bullet = instance_create(x,y,obj_bullet);
-                Bullet.direction = MouseDirection + random_range(-1,1);
+                Bullet.direction = MouseDirection + random_range(-AimAccur,AimAccur);
                 audio_play_sound(aBullet,1,false);
                 SecondsSinceLastShot = 0;
             }
@@ -130,7 +141,7 @@ if mouse_check_button(mb_right){
         case 2:
             if SecondsSinceLastShot &gt;= SecondsBetweenShots {
                 Bullet = instance_create(x,y,obj_bullet);
-                Bullet.direction = MouseDirection + random_range(-1,1);
+                Bullet.direction = MouseDirection + random_range(-AimAccur,AimAccur);
                 audio_play_sound(aBullet,1,false);
                 SecondsSinceLastShot = 0;
             }
@@ -141,6 +152,7 @@ if mouse_check_button(mb_right){
     window_set_cursor(cr_default);
     cursor_sprite = -1;
     IsAiming = false;
+    image_index = 0;
 }
 
 SecondsSinceLastShot += 1 / room_speed;
@@ -171,7 +183,7 @@ SecondsSinceLastShot += 1 / room_speed;
 
 //Draw aimingline
 if IsAiming {
-    draw_set_alpha(0.4);
+    draw_set_alpha(0.3);
     draw_line_width_colour(x,y,mouse_x,mouse_y,2,c_red,c_white);
     draw_set_alpha(1);
 }
