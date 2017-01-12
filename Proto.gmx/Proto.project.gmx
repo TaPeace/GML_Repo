@@ -80,6 +80,7 @@
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_Player_X</sprite>
+      <sprite>sprites\spr_arm</sprite>
     </sprites>
     <sprites name="Splatter">
       <sprite>sprites\spr_Bloodsplatter</sprite>
@@ -100,7 +101,6 @@
       <sprite>sprites\spr_antidote_L</sprite>
       <sprite>sprites\spr_laterne</sprite>
     </sprites>
-    <sprite>sprites\sMaster</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_Default</background>
@@ -123,13 +123,16 @@
     <objects name="Furniture">
       <object>objects\obj_Regal</object>
     </objects>
-    <object>objects\oMaster</object>
-    <object>objects\obj_Player</object>
+    <objects name="Player">
+      <object>objects\obj_Player</object>
+      <object>objects\obj_arm</object>
+    </objects>
     <object>objects\obj_Enemy</object>
     <object>objects\obj_handgun</object>
     <object>objects\obj_mg_v1</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_Bloodsplatter</object>
+    <object>objects\obj_door1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Testraum</room>

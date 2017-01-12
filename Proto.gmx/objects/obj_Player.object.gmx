@@ -76,13 +76,6 @@ hMove = kLeft + kRight;
 vSpd = vMove * moveSpeed;
 hSpd = hMove * moveSpeed;
 
-if kLeft = -1 {
-    image_xscale = -1;
-}
-if kRight = 1 {
-    image_xscale = 1;
-}
-
 //Point direction to mouse
 MouseDirection = point_direction(x,y,mouse_x,mouse_y);
 
@@ -123,7 +116,7 @@ y += vSpd;
 
 //Aiming
 if mouse_check_button(mb_right){
-    image_index = 1;
+//    image_index = 1;
     window_set_cursor(cr_none);
     cursor_sprite = spr_AimCursor;
     IsAiming = true;
@@ -152,7 +145,7 @@ if mouse_check_button(mb_right){
     window_set_cursor(cr_default);
     cursor_sprite = -1;
     IsAiming = false;
-    image_index = 0;
+//    image_index = 0;
 }
 
 SecondsSinceLastShot += 1 / room_speed;
