@@ -106,6 +106,9 @@
     <background>background\bgr_Default</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\Shoot.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fon_Text</font>
   </fonts>
