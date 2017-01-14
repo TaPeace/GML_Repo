@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_PlayerMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -26,6 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Init variables
+
+enum States {
+    idle,
+    aiming
+}
+
+Current_State = States.idle;
 
 //Speed variables
 hSpd = 0;
@@ -62,7 +69,7 @@ gun = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Step event
+            <string>/// Default Movement
 
 //Get inputs
 kUp = -keyboard_check(ord("W"));
@@ -97,8 +104,6 @@ if place_meeting(x + hSpd,y,obj_Blocks_Parent){
 }
 x += hSpd;
 
-
-
 //Vertical collision
 if place_meeting(x,y + vSpd,obj_Blocks_Parent){
     if place_meeting(x, y + sign(vSpd), obj_Blocks_Parent) &amp;&amp; !place_meeting(x - 1, y + sign(vSpd), obj_Blocks_Parent){
@@ -114,41 +119,85 @@ if place_meeting(x,y + vSpd,obj_Blocks_Parent){
 }
 y += vSpd;
 
-//Aiming
-if mouse_check_button(mb_right){
-//    image_index = 1;
-    window_set_cursor(cr_none);
-    cursor_sprite = spr_AimCursor;
-    IsAiming = true;
-    //Shooting
-    if mouse_check_button(mb_left) {
-        switch gun {
-        case 1:
-            if SecondsSinceLastShot &gt;= SecondsBetweenShots {
-                Bullet = instance_create(x,y,obj_bullet);
-                Bullet.direction = MouseDirection + random_range(-AimAccur,AimAccur);
-                audio_play_sound(aBullet,1,false);
-                SecondsSinceLastShot = 0;
-            }
-            break;
-        case 2:
-            if SecondsSinceLastShot &gt;= SecondsBetweenShots {
-                Bullet = instance_create(x,y,obj_bullet);
-                Bullet.direction = MouseDirection + random_range(-AimAccur,AimAccur);
-                audio_play_sound(aBullet,1,false);
-                SecondsSinceLastShot = 0;
-            }
-            break;
-        }
-    }
-} else {
+SecondsSinceLastShot += 1 / room_speed;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Idle state
+
+if Current_State = States.idle {
     window_set_cursor(cr_default);
     cursor_sprite = -1;
     IsAiming = false;
-//    image_index = 0;
+    //    image_index = 0;
+    //Set sprite to idle
+    if mouse_check_button(mb_right) {
+        Current_State = States.aiming;
+    }
 }
 
-SecondsSinceLastShot += 1 / room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Aiming state
+
+if Current_State = States.aiming {
+    if mouse_check_button(mb_right){
+        window_set_cursor(cr_none);
+        cursor_sprite = spr_AimCursor;
+        IsAiming = true;
+        
+        //Shooting
+        if mouse_check_button(mb_left) {
+            switch gun {
+            case 1:
+                Shoot();
+                break;
+            case 2:
+                Shoot();
+                break;
+            }
+        }
+    } else {
+    Current_State = States.idle;
+    }
+}
+
 
 </string>
           </argument>

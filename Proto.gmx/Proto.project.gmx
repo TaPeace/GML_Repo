@@ -80,6 +80,7 @@
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_Player_X</sprite>
+      <sprite>sprites\spr_PlayerMask</sprite>
       <sprite>sprites\spr_arm</sprite>
     </sprites>
     <sprites name="Splatter">
@@ -106,6 +107,9 @@
     <background>background\bgr_Default</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\Shoot.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fon_Text</font>
   </fonts>
@@ -127,10 +131,12 @@
       <object>objects\obj_Player</object>
       <object>objects\obj_arm</object>
     </objects>
+    <objects name="Weapons">
+      <object>objects\obj_handgun</object>
+      <object>objects\obj_mg_v1</object>
+      <object>objects\obj_bullet</object>
+    </objects>
     <object>objects\obj_Enemy</object>
-    <object>objects\obj_handgun</object>
-    <object>objects\obj_mg_v1</object>
-    <object>objects\obj_bullet</object>
     <object>objects\obj_Bloodsplatter</object>
     <object>objects\obj_door1</object>
   </objects>

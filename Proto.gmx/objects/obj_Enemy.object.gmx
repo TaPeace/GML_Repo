@@ -25,7 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Hp = 5;
+            <string>enum EnemyStates {
+    idle,
+    inRange,
+    attack
+}
+
+Hp = 5;
+AggroRange = 200;
+AttackRange = 150;
+PlayerDistance = 0;
+image_speed = 0.5;
+
+Current_State = EnemyStates.idle;
 </string>
           </argument>
         </arguments>
@@ -48,13 +60,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Step event
+            <string>/// Idle state
+PlayerDistance = point_distance(x,y,obj_Player.x,obj_Player.y);
 
-//Move forwards to player
-if instance_exists(obj_Player){
-    mp_potential_step_object(obj_Player.x,obj_Player.y,20 /room_speed,obj_Blocks_Parent);
-//    speed = 20 / room_speed;
-//    direction = point_direction(x,y,obj_Player.x,obj_Player.y);
+if Current_State = EnemyStates.idle {
+    //Idle stuff
+    sprite_index = spr_enemy;
+    //If Player is in Range
+    if instance_exists(obj_Player){
+        if PlayerDistance &lt;= AggroRange {
+            Current_State = EnemyStates.inRange;
+        }
+    }
 }
 
 //Hit by bullet
@@ -83,6 +100,67 @@ if place_meeting(x,y,obj_bullet) {
     }
 }
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///inRange State
+if Current_State = EnemyStates.inRange {
+    sprite_index = spr_enemy_v2;
+    if PlayerDistance &lt;= AttackRange {
+        Current_State = EnemyStates.attack;
+    }
+    if PlayerDistance &gt;= AggroRange {
+        Current_State = EnemyStates.idle;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Attack state
+if Current_State = EnemyStates.attack {
+    //Move forwards to player
+    if instance_exists(obj_Player){
+        mp_potential_step_object(obj_Player.x,obj_Player.y,20/room_speed,obj_Blocks_Parent);
+        if PlayerDistance &gt; AggroRange {
+            Current_State = EnemyStates.idle;
+        }
+    }
+}
 
 </string>
           </argument>
