@@ -19,6 +19,7 @@
     </sprites>
     <sprites name="Doors">
       <sprite>sprites\spr_door1</sprite>
+      <sprite>sprites\spr_DoorFrontMask</sprite>
       <sprite>sprites\spr_door2</sprite>
       <sprite>sprites\spr_door3</sprite>
       <sprite>sprites\spr_door4</sprite>
@@ -79,7 +80,7 @@
       <sprite>sprites\spr_AimCursor</sprite>
     </sprites>
     <sprites name="Player">
-      <sprite>sprites\spr_Player_X</sprite>
+      <sprite>sprites\spr_Player_idle</sprite>
       <sprite>sprites\spr_PlayerMask</sprite>
       <sprite>sprites\spr_arm</sprite>
     </sprites>
@@ -139,6 +140,7 @@
     <object>objects\obj_Enemy</object>
     <object>objects\obj_Bloodsplatter</object>
     <object>objects\obj_door1</object>
+    <object>objects\obj_DoorMask</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Testraum</room>

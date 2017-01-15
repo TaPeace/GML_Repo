@@ -58,6 +58,7 @@ kRestart = keyboard_check(ord("R"));
 if kEscape {game_end()};
 if kRestart {game_restart()};
 
+/*
 //Random EnemySpawning
 if SecondsSinceLastSpawn &gt;= SecondsBetweenSpawn {
     SecondsSinceLastSpawn = 0;
@@ -72,7 +73,7 @@ if SecondsSinceLastSpawn &gt;= SecondsBetweenSpawn {
     }
 } else {
     SecondsSinceLastSpawn += 1 / room_speed;
-}
+}*/
 </string>
           </argument>
         </arguments>
