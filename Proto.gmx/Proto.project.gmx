@@ -81,6 +81,7 @@
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_Player_idle</sprite>
+      <sprite>sprites\spr_Player_Run</sprite>
       <sprite>sprites\spr_PlayerMask</sprite>
       <sprite>sprites\spr_arm</sprite>
     </sprites>
