@@ -62,6 +62,7 @@
       <sprite>sprites\spr_baseball_bat</sprite>
       <sprite>sprites\spr_baseball_bat_v2</sprite>
       <sprite>sprites\spr_baseball_bat_v3</sprite>
+      <sprite>sprites\spr_shell</sprite>
     </sprites>
     <sprites name="Wepaons Modi">
       <sprite>sprites\spr_silencer</sprite>
@@ -137,6 +138,7 @@
       <object>objects\obj_handgun</object>
       <object>objects\obj_mg_v1</object>
       <object>objects\obj_bullet</object>
+      <object>objects\obj_shell</object>
     </objects>
     <object>objects\obj_Enemy</object>
     <object>objects\obj_Bloodsplatter</object>

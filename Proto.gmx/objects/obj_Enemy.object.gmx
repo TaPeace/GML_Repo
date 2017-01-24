@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enum EnemyStates {
+            <string>///Init Variable
+
+enum EnemyStates {
     idle,
     inRange,
     attack
