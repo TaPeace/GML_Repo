@@ -63,6 +63,7 @@
       <sprite>sprites\spr_baseball_bat_v2</sprite>
       <sprite>sprites\spr_baseball_bat_v3</sprite>
       <sprite>sprites\spr_shell</sprite>
+      <sprite>sprites\spr_handgranate</sprite>
     </sprites>
     <sprites name="Wepaons Modi">
       <sprite>sprites\spr_silencer</sprite>
@@ -85,6 +86,8 @@
       <sprite>sprites\spr_Player_Run</sprite>
       <sprite>sprites\spr_PlayerMask</sprite>
       <sprite>sprites\spr_arm</sprite>
+      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player2</sprite>
     </sprites>
     <sprites name="Splatter">
       <sprite>sprites\spr_Bloodsplatter</sprite>
