@@ -30,8 +30,10 @@ y = obj_Player.y - 10;
 
 if image_angle &gt; 90 and image_angle &lt; 270{
     obj_Player.image_xscale = -1;
+    image_yscale = -1;
 } else {
     obj_Player.image_xscale = 1;
+    image_yscale = 1;
 }
 
 image_angle = point_direction(x,y,mouse_x,mouse_y);

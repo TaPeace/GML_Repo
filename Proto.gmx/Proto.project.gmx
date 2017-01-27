@@ -19,6 +19,7 @@
     </sprites>
     <sprites name="Doors">
       <sprite>sprites\spr_door1</sprite>
+      <sprite>sprites\spr_DoorFrontMask</sprite>
       <sprite>sprites\spr_door2</sprite>
       <sprite>sprites\spr_door3</sprite>
       <sprite>sprites\spr_door4</sprite>
@@ -61,6 +62,7 @@
       <sprite>sprites\spr_baseball_bat</sprite>
       <sprite>sprites\spr_baseball_bat_v2</sprite>
       <sprite>sprites\spr_baseball_bat_v3</sprite>
+      <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_handgranate</sprite>
     </sprites>
     <sprites name="Wepaons Modi">
@@ -80,7 +82,8 @@
       <sprite>sprites\spr_AimCursor</sprite>
     </sprites>
     <sprites name="Player">
-      <sprite>sprites\spr_Player_X</sprite>
+      <sprite>sprites\spr_Player_idle</sprite>
+      <sprite>sprites\spr_Player_Run</sprite>
       <sprite>sprites\spr_PlayerMask</sprite>
       <sprite>sprites\spr_arm</sprite>
       <sprite>sprites\spr_player</sprite>
@@ -138,10 +141,12 @@
       <object>objects\obj_handgun</object>
       <object>objects\obj_mg_v1</object>
       <object>objects\obj_bullet</object>
+      <object>objects\obj_shell</object>
     </objects>
     <object>objects\obj_Enemy</object>
     <object>objects\obj_Bloodsplatter</object>
     <object>objects\obj_door1</object>
+    <object>objects\obj_DoorMask</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Testraum</room>
