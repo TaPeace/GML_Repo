@@ -27,6 +27,8 @@
     <sprites name="Enemys">
       <sprite>sprites\spr_enemy</sprite>
       <sprite>sprites\spr_enemy_v2</sprite>
+      <sprite>sprites\spr_dog</sprite>
+      <sprite>sprites\spr_dog_corrupted</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\spr_handgun</sprite>
@@ -64,6 +66,7 @@
       <sprite>sprites\spr_baseball_bat_v3</sprite>
       <sprite>sprites\spr_shell</sprite>
       <sprite>sprites\spr_handgranate</sprite>
+      <sprite>sprites\spr_axt</sprite>
     </sprites>
     <sprites name="Wepaons Modi">
       <sprite>sprites\spr_silencer</sprite>
